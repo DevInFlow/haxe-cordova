@@ -3,3 +3,5 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 *.bak
+.idea
+cordova.iml
