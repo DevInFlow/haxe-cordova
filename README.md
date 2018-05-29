@@ -35,6 +35,12 @@ Compatible with Haxe 3.2+.
 
 And more to come...
 
+fork implementations:
+
+* [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/).
+* [cordova-plugin-android-permissions](https://github.com/NeoLSN/cordova-plugin-android-permissions).
+
+
 ## API
 
 Use example with the Camera plugin:
