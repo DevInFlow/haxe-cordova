@@ -39,6 +39,7 @@ fork implementations:
 
 * [cordova-plugin-geolocation](https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-geolocation/).
 * [cordova-plugin-android-permissions](https://github.com/NeoLSN/cordova-plugin-android-permissions).
+* [com.paypal.cordova.mobilesdk](https://github.com/paypal/PayPal-Cordova-Plugin).
 
 
 ## API
