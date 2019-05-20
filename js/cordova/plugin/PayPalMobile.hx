@@ -64,29 +64,37 @@ typedef PayPalConfigurationOptions = {
 }
 
 @:enum abstract Currency(String) from String to String{
-    var AUD = AUD;
-    var BRL = BRL; //Note: This currency is supported as a payment currency and a currency balance for in-country PayPal accounts only.
-    var CAD = CAD;
-    var CZK = CZK;
-    var DKK = DKK;
-    var HKD = HKD;
-    var HUF = HUF; //Note: This currency does not support decimals. Decimal amounts will throw an error.
-    var ILS = ILS;
-    var JPY = JPY; //Note: This currency does not support decimals. Decimal amounts will throw an error.
-    var MYR = MYR; //Note: This currency is supported as a payment currency and a currency balance for in-country PayPal accounts only.
-    var MXN = MXN;
-    var NOK = NOK;
-    var NZD = NZD;
-    var PHP = PHP;
-    var PLN = PLN;
-    var GBP = GBP;
-    var SGD = SGD;
-    var SEK = SEK;
-    var CHF = CHF;
-    var TWD = TWD; //Note: This currency does not support decimals. Decimal amounts will throw an error.
-    var THB = THB;
-    var USD = USD;
+    var AUD = "AUD";
+    var BRL = "BRL"; //Note: This currency is supported as a payment currency and a currency balance for in-country PayPal accounts only.
+    var CAD = "CAD";
+    var CZK = "CZK";
+    var DKK = "DKK";
+    var HKD = "HKD";
+    var HUF = "HUF"; //Note: This currency does not support decimals. Decimal amounts will throw an error.
+    var ILS = "ILS";
+    var JPY = "JPY"; //Note: This currency does not support decimals. Decimal amounts will throw an error.
+    var MYR = "MYR"; //Note: This currency is supported as a payment currency and a currency balance for in-country PayPal accounts only.
+    var MXN = "MXN";
+    var NOK = "NOK";
+    var NZD = "NZD";
+    var PHP = "PHP";
+    var PLN = "PLN";
+    var GBP = "GBP";
+    var SGD = "SGD";
+    var SEK = "SEK";
+    var CHF = "CHF";
+    var TWD = "TWD"; //Note: This currency does not support decimals. Decimal amounts will throw an error.
+    var THB = "THB";
+    var USD = "USD";
 }
+
+
+@:enum abstract PayPalPaymentState(String) from String to String{
+    var SUCCESS = 'success';
+    var CANCELLED = 'payment cancelled';
+    var APPROVED = 'approved';
+}
+
 
 class PayPalConfiguration {
     public static function setup(?options:PayPalConfigurationOptions):PayPalConfigurationOptions {
@@ -231,20 +239,6 @@ class PayPalPayment {
         this.intent = Std.string(intent);
         this.details = details;
     }
-
-//    public function invoiceNumber(invoiceNumber:String):String {return this.invoiceNumber = invoiceNumber; }
-//
-//    public function custom(custom:String):String {return this.custom = custom; }
-//
-//    public function softDescriptor(softDescriptor:String):String {return this.softDescriptor = softDescriptor; }
-//
-//    public function bnCode(bnCode:String):String {return this.bnCode = bnCode; }
-//
-//    public function items(items:Array<PayPalItem>):Array<PayPalItem> {return this.items = items; }
-//
-//    public function payeeEmail(payeeEmail:String):String {return this.payeeEmail = payeeEmail; }
-//
-//    public function shippingAddress(shippingAddress:PayPalShippingAddress):PayPalShippingAddress {return this.shippingAddress = shippingAddress; }
 
 }
 
