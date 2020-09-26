@@ -153,6 +153,9 @@ package js.cordova.plugin;
     public static inline var WRITE_SYNC_SETTINGS:String = 'android.permission.WRITE_SYNC_SETTINGS';
     public static inline var WRITE_USER_DICTIONARY:String = 'android.permission.WRITE_USER_DICTIONARY';
     public static inline var WRITE_VOICEMAIL:String = 'com.android.voicemail.permission.WRITE_VOICEMAIL';
+
+
     static public function checkPermission(permissions:Dynamic, successCallback:Dynamic, errorCallback:Dynamic):Void;
-    static public function requestPermission(permissions:Dynamic, successCallback:Dynamic, errorCallback:Dynamic):Void;
+    static public function requestPermission(permission:String, successCallback:Dynamic, errorCallback:Dynamic):Void;
+    static public function requestPermissions(permissions:Array<String>, successCallback:Dynamic, errorCallback:Dynamic):Void;
 }

@@ -32,7 +32,7 @@ typedef FileTransferUploadOptions = {
 	? fileName : String,
 	? httpMethod : String,
 	? mimeType : String,
-	? params : String,
+	?params:Dynamic,
 	? chunkedMode : Bool,
 	? headers : haxe.DynamicAccess<String>
 }

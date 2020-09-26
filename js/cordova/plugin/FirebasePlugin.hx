@@ -2,6 +2,7 @@ package js.cordova.plugin;
 @:native("window.FirebasePlugin")
 extern class FirebasePlugin {
     public static function getToken(successCallback:String->Void,errorCallback:Dynamic->Void):Void;
+    public static function getInfo(callback:String->Void):Void;
     public static function onTokenRefresh(successCallback:String->Void,errorCallback:Dynamic->Void):Void;
     public static function onNotificationOpen(successCallback:String->Void,errorCallback:Dynamic->Void):Void;
     public static function grantPermission():Void;
